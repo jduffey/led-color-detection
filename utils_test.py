@@ -1,4 +1,4 @@
-from utils import *
+import utils
 
 img_dir = 'images/'
 
@@ -21,31 +21,31 @@ white_imgs = [img_dir + 'white_square.png',
 
 def test_detect_red_images():
     for image in red_imgs:
-        assert True == is_red(image)
-        assert False == is_green(image)
-        assert False == is_blue(image)
-        assert False == is_white(image)
+        assert True == utils.is_red(image)
+        assert False == utils.is_green(image)
+        assert False == utils.is_blue(image)
+        assert False == utils.is_white(image)
 
 
 def test_detect_green_images():
     for image in green_imgs:
-        assert False == is_red(image)
-        assert True == is_green(image)
-        assert False == is_blue(image)
-        assert False == is_white(image)
+        assert False == utils.is_red(image)
+        assert True == utils.is_green(image)
+        assert False == utils.is_blue(image)
+        assert False == utils.is_white(image)
 
 
 def test_detect_blue_images():
     for image in blue_imgs:
-        assert False == is_red(image)
-        assert False == is_green(image)
-        assert True == is_blue(image)
-        assert False == is_white(image)
+        assert False == utils.is_red(image)
+        assert False == utils.is_green(image)
+        assert True == utils.is_blue(image)
+        assert False == utils.is_white(image)
 
 
 def test_detect_white_images():
     for image in white_imgs:
-        assert False == is_red(image)
-        assert False == is_green(image)
-        assert False == is_blue(image)
-        assert True == is_white(image)
+        assert False == utils.is_red(image)
+        assert False == utils.is_green(image)
+        assert False == utils.is_blue(image)
+        assert True == utils.is_white(image)
